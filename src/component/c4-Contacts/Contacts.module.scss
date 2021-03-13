@@ -1,0 +1,39 @@
+.contacts{
+   background-color: #1b1b1c;
+   padding: 50px 0;
+
+   &_form{
+      width: 60%;
+      margin: 0  auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      input, textarea{
+         background-color: #4a4a4a;
+         border: 1px solid #989899;
+         border-radius: 2px;
+         width: 100%;
+         color:#fff;
+      }
+      input{
+         min-height: 35px;
+      }
+      textarea{
+         resize: vertical;
+      }
+      button{
+         display: block;
+         margin: 0  auto;
+         background-color: #4a4a4a;
+         border: 1px solid #989899;
+         border-radius: 2px;
+         padding: 10px 30px ;
+      }
+   }
+}
+
+@media (max-width: 700px) {
+   .contacts_form{
+      width: 100%;
+   }
+}

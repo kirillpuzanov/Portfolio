@@ -1,0 +1,15 @@
+.projects{
+
+   background-color: #171c23;
+   color: #ffffff;
+   padding: 50px 0;
+   h2{
+      text-align: center;
+   }
+   &_inner{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+   }
+}

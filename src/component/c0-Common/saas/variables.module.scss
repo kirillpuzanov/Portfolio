@@ -1,0 +1,13 @@
+$rootColor:#7b7f82;
+$colorText:#000;
+
+
+
+
+
+@mixin flexCenter() {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: row;
+}
