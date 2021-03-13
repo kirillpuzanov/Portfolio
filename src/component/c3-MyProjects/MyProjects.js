@@ -10,11 +10,11 @@ export const MyProjects = (props) => {
           <div className={'container'}>
              <h2>Мои проекты</h2>
              <div className={s.projects_inner}>
-                {
-                   props.projects.map((el) => {
-                      return <Project key={el.id} el={el}/>
-                   })
-                }
+                {/*{*/}
+                {/*   props.projects.map((el) => {*/}
+                {/*      return <Project key={el.id} el={el}/>*/}
+                {/*   })*/}
+                {/*}*/}
              </div>
           </div>
        </section>

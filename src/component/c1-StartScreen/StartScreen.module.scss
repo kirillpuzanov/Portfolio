@@ -2,12 +2,12 @@
 
 
 .first {
-   max-width: 100vw;
    height: 100vh;
-
+   position: relative;
+   overflow: hidden;
    &_colorBlock {
-      background-color: $rootColor;
-      position: fixed;
+      background-color: #e2e2e2;
+      position: absolute;
       height: 200%;
       width: 100%;
       transform: rotate(-13deg);
@@ -46,6 +46,13 @@
    }
 }
 
+.btn_block {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   flex-wrap: wrap;
+}
+
 @media (max-width: 920px) {
    .first {
       &_row {
@@ -64,6 +71,9 @@
       .text {
          text-align: center;
       }
+   }
+   .btn_block{
+      justify-content: center;
    }
 }
 

@@ -3,8 +3,8 @@
 .nav {
    position: fixed;
    width: 70px;
-   height: 350px;
-   right: 60px;
+   height: 390px;
+   right: 10px;
    top: 0;
    z-index: 103;
 
@@ -54,7 +54,7 @@
       position: absolute;
       right: 20px;
       font-size: 18px;
-      font-weight: 400;
+      font-weight: 300;
       min-width: 110px;
       padding: 0 10px;
       visibility: hidden;
@@ -70,6 +70,13 @@
    visibility: visible;
    opacity: 1;
 }
+
+.activeLink {
+   border: 2px solid #ffffff;
+   border-radius: 50%;
+   box-shadow: 0 0 10px rgba(0, 0, 0, .7);
+}
+
 
 
 @media (max-width: 450px) {
@@ -92,8 +99,9 @@
       }
 
       &_text {
-         top: 45px;
-         right: -38px;
+         top: 40px;
+         right: -48px;
+         font-size: 14px;
       }
    }
    .nav ul li:hover a .nav_text {

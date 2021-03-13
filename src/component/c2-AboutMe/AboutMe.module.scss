@@ -1,12 +1,45 @@
 @import '../c0-Common/saas/variables.module';
 
-.skills{
-   color: $colorText;
-   padding: 50px 0 100px 0;
-   h2{
-      text-align: center;
-   }
-   &_inner{
+.about {
+   min-height: 100vh;
+   position: relative;
+   overflow: hidden;
 
+   &_colorBlock {
+      background-color: #e2e2e2;
+      position: absolute;
+      z-index: -1;
+      height: 200%;
+      width: 100%;
+      transform: rotate(20deg);
+      left: 71%;
+   }
+
+   &_inner {
+      @include flexCenter();
+      flex-wrap: wrap;
+
+      &_contacts {
+         padding: 30px 10px 0;
+      }
+
+      &_aboutMeText {
+         padding: 30px 10px 0;
+         width: 65%;
+         min-width: 320px;
+      }
    }
 }
+
+@media (max-width: 935px) {
+   .about {
+      &_inner {
+         justify-content: center;
+         &_contacts,
+         &_aboutMeText {
+            text-align: center;
+         }
+      }
+   }
+}
+

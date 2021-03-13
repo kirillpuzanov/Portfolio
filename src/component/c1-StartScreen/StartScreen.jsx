@@ -3,6 +3,8 @@ import s from './StartScreen.module.scss'
 import {MyBtn} from "../c0-Common/btn/MyBtn";
 import userPhoto from '../../assets/img/UserPhoto.png'
 import {faUser} from "@fortawesome/free-regular-svg-icons";
+import {faFile} from "@fortawesome/free-solid-svg-icons";
+import {ABOUT_ME, CV} from "../../root/routes";
 
 export const StartScreen = () => {
 
@@ -28,7 +30,10 @@ export const StartScreen = () => {
                 <h6 className={s.text_hello}>Привет!</h6>
                 <h1>Меня зовут Кирилл Пузанов</h1>
                 <p className={s.text_descr}>Я, Frontend разработчик</p>
-                <MyBtn path='/' btnText='Больше обо мне' iconName={faUser}/>
+                <div className={s.btn_block}>
+                   <MyBtn path={ABOUT_ME} btnText='Узнать больше' iconName={faUser}/>
+                   <MyBtn path={CV} btnText='Посмотреть CV' iconName={faFile}/>
+                </div>
              </div>
           </div>
        </section>
