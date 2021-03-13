@@ -27,7 +27,7 @@ export const StartScreen = () => {
              <div className={s.text}>
                 <h6 className={s.text_hello}>Привет!</h6>
                 <h1>Меня зовут Кирилл Пузанов</h1>
-                <p className={s.text_descr}>Frontend разработчик</p>
+                <p className={s.text_descr}>Я, Frontend разработчик</p>
                 <MyBtn path='/' btnText='Больше обо мне' iconName={faUser}/>
              </div>
           </div>

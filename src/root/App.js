@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
 import {StartScreen} from "../component/c1-StartScreen/StartScreen";
-import {Skills} from "../component/c2-Skills/Skills";
+import {AboutMe} from "../component/c2-AboutMe/AboutMe";
 import {MyProjects} from "../component/c3-MyProjects/MyProjects";
 import {Contacts} from "../component/c4-Contacts/Contacts";
 import {dataBase} from "../component/dataFile";
@@ -12,7 +12,7 @@ function App() {
        <div className={'App'}>
           <Nav/>
           <StartScreen/>
-          <Skills skillsPage={dataBase.skillsPage}/>
+          <AboutMe skillsPage={dataBase.skillsPage}/>
           <MyProjects projects={dataBase.projectsPage}/>
           <Contacts/>
        </div>

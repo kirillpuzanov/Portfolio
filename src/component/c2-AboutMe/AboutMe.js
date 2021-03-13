@@ -1,11 +1,11 @@
 import React from "react";
 import {SkillCard} from "./SkillCard/SkillCard";
-import s from './Skills.module.scss'
+import s from './AboutMe.module.scss'
 
 
 
 
-export const Skills = (props) => {
+export const AboutMe = (props) => {
 
    return (
        <section id='Skills' className={s.skills} >
