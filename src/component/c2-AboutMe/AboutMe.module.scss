@@ -1,5 +1,8 @@
 @import '../c0-Common/saas/variables.module';
 
+
+//  about me info
+
 .about {
    min-height: 100vh;
    position: relative;
@@ -16,11 +19,31 @@
    }
 
    &_inner {
+      position: relative;
       @include flexCenter();
+      justify-content: space-between;
       flex-wrap: wrap;
+
+      &:after {
+         content: '';
+         width: calc(100vw - 80%);
+         height: 2px;
+         background-color: $rootColor;
+         position: absolute;
+         left: 0;
+         right: 0;
+         display: block;
+         margin: 0 auto;
+         bottom: -35px;
+      }
 
       &_contacts {
          padding: 30px 10px 0;
+
+         li {
+            font-size: 18px;
+            line-height: 2;
+         }
       }
 
       &_aboutMeText {
@@ -31,7 +54,7 @@
    }
 }
 
-@media (max-width: 935px) {
+@media (max-width: 1064px) {
    .about {
       &_inner {
          justify-content: center;
@@ -43,3 +66,110 @@
    }
 }
 
+// about me skills
+
+.mySkills {
+   margin-top: 65px;
+   min-height: 400px;
+
+   h3 {
+      text-align: center;
+      color: $rootColor;
+      font-size: 28px;
+      font-weight: 500;
+   }
+
+   &_inner {
+      margin-top: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+   }
+}
+
+@media (max-width: 935px) {
+   .mySkills {
+      &_inner {
+         justify-content: center;
+      }
+   }
+}
+
+@media(max-width: 780px) {
+
+}
+
+//about me  Experience
+.experience {
+   margin-top: 45px;
+   h3 {
+      text-align: center;
+      color: $rootColor;
+      font-size: 28px;
+      font-weight: 500;
+   }
+
+   &_list {
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+
+      li {
+         width: 47%;
+         min-width: 320px;
+         padding: 40px 0 0 40px;
+         position: relative;
+      }
+
+      &_icon {
+         position: absolute;
+         left: -5px;
+         top: 30px;
+         width: 40px;
+         height: 40px;
+         background-color: #fff;
+         color: $rootColor;
+         border-radius: 50%;
+         border: 1px solid $rootColor;
+         text-align: center;
+         padding-top: 8px;
+      }
+
+      &_period {
+         color: $rootColor;
+         font-size: 16px;
+      }
+
+      &_title {
+         font-size: 18px;
+         font-weight: 500;
+         line-height: 1.2;
+         text-transform: uppercase;
+         color: #000000;
+         margin-top: 10px;
+      }
+
+      &_description {
+         font-size: 16px;
+         color: $rootColor;
+         margin-top: 10px;
+         font-weight: 300;
+         line-height: 1.8;
+      }
+   }
+}
+@media (max-width: 777px) {
+   .experience{
+      &_list{
+         justify-content: center;
+         li {
+            width: 80%;
+            padding: 40px 0 0 40px;
+            min-width: 280px;
+         }
+      }
+   }
+}

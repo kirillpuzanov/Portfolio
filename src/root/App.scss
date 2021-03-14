@@ -21,7 +21,7 @@ section {
    z-index: 100;
    background-color: white;
    margin: 0 auto;
-   padding: 20px 80px 10px 20px;
+   padding: 20px 100px 10px 20px;
    color: $colorText;
 }
 
@@ -95,7 +95,7 @@ select {
 
 @media (max-width: 450px){
    section {
-      padding: 20px 10px 10px 20px;
+      padding: 20px 20px 10px 20px;
    }
 }
 

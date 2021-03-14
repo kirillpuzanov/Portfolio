@@ -78,7 +78,6 @@
 }
 
 
-
 @media (max-width: 450px) {
    .nav {
       width: 100vw;
@@ -106,5 +105,17 @@
    }
    .nav ul li:hover a .nav_text {
       transform: translateX(0);
+   }
+}
+
+@media (max-height: 450px) {
+   .nav {
+      ul {
+         li {
+            width: 45px;
+            height: 45px;
+            margin: 5px 0;
+         }
+      }
    }
 }
