@@ -5,6 +5,7 @@
    height: 100vh;
    position: relative;
    overflow: hidden;
+
    &_colorBlock {
       background-color: #e2e2e2;
       position: absolute;
@@ -13,6 +14,11 @@
       transform: rotate(-13deg);
       left: -70%;
    }
+   //
+   //&_img {
+   //border-radius: 10px;
+   //   box-shadow: 0 2px 5px #000000;
+   //}
 
    &_row {
       max-width: 100%;
@@ -72,7 +78,7 @@
          text-align: center;
       }
    }
-   .btn_block{
+   .btn_block {
       justify-content: center;
    }
 }

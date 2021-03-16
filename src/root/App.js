@@ -3,7 +3,7 @@ import './App.scss';
 
 import {Nav} from "../component/c0-Common/nav/nav";
 import {Routes} from "./routes";
-import {LogoSmile} from "../component/logoSmile/LogoSmile";
+import {LogoSmile} from "../component/c0-Common/logoSmile/LogoSmile";
 
 function App() {
    return (

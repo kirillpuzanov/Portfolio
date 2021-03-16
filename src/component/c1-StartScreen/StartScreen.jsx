@@ -4,12 +4,12 @@ import {MyBtn} from "../c0-Common/btn/MyBtn";
 import userPhoto from '../../assets/img/UserPhoto.png'
 import {faUser} from "@fortawesome/free-regular-svg-icons";
 import {faFile} from "@fortawesome/free-solid-svg-icons";
-import {ABOUT_ME, CV} from "../../root/routes";
+import {ABOUT_ME} from "../../root/routes";
 
 export const StartScreen = () => {
 
    const styleImg = {
-      width: '45%',
+      width: '300px',
       height: 'calc(100vh - 60px)',
       backgroundImage: `url(${userPhoto})`,
       backgroundRepeat: ' no-repeat',
@@ -32,7 +32,7 @@ export const StartScreen = () => {
                 <p className={s.text_descr}>Я, Frontend разработчик</p>
                 <div className={s.btn_block}>
                    <MyBtn path={ABOUT_ME} btnText='Узнать больше' iconName={faUser}/>
-                   <MyBtn path={CV} btnText='Посмотреть CV' iconName={faFile}/>
+                   <MyBtn _blankBtn={true} btnText='Посмотреть CV' iconName={faFile}/>
                 </div>
              </div>
           </div>

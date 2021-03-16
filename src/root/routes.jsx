@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {Redirect, Switch, Route} from 'react-router-dom';
+import {Switch, Route} from 'react-router-dom';
 import {StartScreen} from "../component/c1-StartScreen/StartScreen";
 import {AboutMe} from "../component/c2-AboutMe/AboutMe";
 import {MyProjects} from "../component/c3-MyProjects/MyProjects";
@@ -8,7 +8,7 @@ import {CVComponent} from "../component/c5-CVComponent/CVComponent";
 import {animated, useTransition} from 'react-spring'
 import {__RouterContext} from "react-router";
 
-export const FIRST_SCREEN = '/';
+export const FIRST_SCREEN = '/portfolio';
 export const ABOUT_ME = '/about_me';
 export const PROJECTS = '/projects';
 export const CONTACTS = '/contacts';
@@ -37,7 +37,7 @@ export const Routes = () => {
       leave: {opacity: 0, transform: 'translate3d(-50%, 0, 0)'}
    })
 
-   return transitions.map(({item,props: transition, key}) => (
+   return transitions.map(({item, props: transition, key}) => (
        <animated.div key={key} style={transition}>
           <Switch location={item}>
              <Route exact path={FIRST_SCREEN} component={StartScreen}/>
@@ -47,7 +47,7 @@ export const Routes = () => {
              <Route path={CV} component={CVComponent}/>
 
 
-             <Redirect from={'*'} to={PAGE_NOT_FOUND_PATH}/>
+             <Route path={'*'} render={() => <div> page not Found</div>}/>
           </Switch>
        </animated.div>
    ))

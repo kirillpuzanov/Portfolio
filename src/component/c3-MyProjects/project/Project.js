@@ -1,34 +1,31 @@
 import React, {useState} from "react";
-import s from './project.module.scss'
-
+import s from './project.module.scss';
 
 export const Project = (props) => {
-
+   const {title, hrefProject, hrefGitHub,background, descr} = props;
    const [active, setActive] = useState(false);
-   const showLink = (id) => setActive(true)
-   const hideLink = () => setActive(false)
-
+   const onShowLink = () => setActive(!active)
 
    return (
-       <div className={s.project}>
-          <div
-               className={s.project_content}
-               onMouseOver={showLink}
-               onMouseOut={hideLink}
-          >
-             <a
-                 href={props.el.hrefProject}
-                 className={active ? `${s.project_content_btn} ${s.show}` : s.project_content_btn}
-             >
+       <div className={s.project_content}>
+          <div style={{backgroundImage: background}}
+               className={s.project_content_wrapp}
+               onMouseOver={onShowLink} onMouseOut={onShowLink}>
+             <div className={active && s.overlay}></div>
+             <a href={hrefProject} target='_blank'
+                className={active ? `${s.project_btn} ${s.showBtn}` : s.project_btn}>
                 Смотреть
              </a>
-             <img
-                 className={active ? `${s.project_content_img} ${s.opacity}` : s.project_content_img}
-                 src={props.el.hrefImg}
-                 alt="project img"/>
-             <h3> {props.el.title}</h3>
-             <p>{props.el.descr}</p>
+             <a href={hrefGitHub} target='_blank'
+                className={active ? `${s.project_btn} ${s.showBtn}` : s.project_btn}>
+                Код GitHub
+             </a>
+          </div>
+          <div className={s.project_descrBlock}>
+             <h4>{title}</h4>
+             <p>{descr}</p>
           </div>
        </div>
    )
 }
+

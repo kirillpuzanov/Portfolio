@@ -1,0 +1,20 @@
+@import '../../component/c0-Common/saas/variables.module.scss';
+
+.cv {
+   margin-top: 60px;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+
+   img {
+      border: 1px solid #4a4a4a;
+      margin-right: 20px;
+   }
+}
+@media(max-width: 450px) {
+   .cv{
+      img{
+         margin: 0;
+      }
+   }
+}

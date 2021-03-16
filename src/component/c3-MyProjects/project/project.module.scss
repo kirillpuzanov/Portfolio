@@ -1,52 +1,92 @@
+@import '../../c0-Common/saas/variables.module';
+
 .project {
-   display: flex;
-   justify-content: space-around;
-   align-items: flex-start;
-   flex-wrap: wrap;
+   //display: flex;
+   //justify-content: space-between;
+   //align-items: center;
+   //flex-wrap: wrap;
 
    &_content {
       width: 300px;
       margin: 50px 10px 0 10px;
-      position: relative;
 
-      &_btn {
-         display: none;
-         border: none;
-         border-radius: 2px;
-         background-color: brown;
-         padding: 8px;
-         text-decoration: none;
-         line-height: 1;
-         color: #000;
-         position: absolute;
-         top: 100px;
-         right: 107px;
-         cursor: pointer;
-         z-index: 9;
+      &_wrapp {
+         position: relative;
+         max-width: 300px;
+         min-height: 200px;
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: center;
+         box-shadow: 0 2px 5px #7b7f82;
       }
 
       &_img {
-         max-width: 200px;
-         height: 200px;
+         width: 100%;
+         height: 100%;
          display: block;
          margin: 0 auto;
          transition: all 0.4s;
-
       }
-      h3, p {
-         text-align: center;
+
+      h4 {
+         padding: 10px 0;
+         text-align: left;
+         font-size: 18px;
+      }
+
+      p {
+         white-space: pre-line;
+         text-align: left;
+      }
+   }
+
+   &_descrBlock {
+      position: relative;
+      z-index: 100;
+   }
+
+   &_btn {
+      display: none;
+      border: none;
+      border-radius: 2px;
+      background-color: #ffffff;
+      padding: 8px;
+      text-decoration: none;
+      line-height: 1;
+      color: $rootColor;
+      position: absolute;
+
+      transform: translate(50%, 0);
+      cursor: pointer;
+      z-index: 9;
+
+      &:nth-child(n) {
+         top: 20%;
+         right: 50%;
+      }
+
+      &:nth-child(2n) {
+         top: 65%;
+         right: 50%;
       }
    }
 }
-.opacity{
-   opacity:0.3;
+
+.overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, .5);
 }
-.show{
+
+.showBtn {
    display: block;
 }
 
 @media (max-width: 380px) {
-   .project_content{
+   .project_content {
       margin: 20px 0;
       padding: 0 10px;
    }

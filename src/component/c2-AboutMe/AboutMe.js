@@ -1,8 +1,6 @@
 import React from "react";
 import s from './AboutMe.module.scss'
 import {SectionTitle} from "../c0-Common/sectionTitle/SectionTitle";
-import {NavLink} from "react-router-dom";
-import {CV} from "../../root/routes";
 import {ProgressLine} from "../c0-Common/progressLine/progressLine";
 import {faBriefcase, faGraduationCap} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -31,9 +29,10 @@ export const AboutMeInfo = () => {
                 <li>Адрес: Санкт-Петербург</li>
                 <li>Национальность: Русский</li>
                 <li>Телефон: <a href="tel:+79111264979">+7 (911) 126-49-79</a></li>
-                <li>Telegram: <a href="https://t.me/Kirill_Spb1991">Напишите мне в Telegram</a></li>
+                <li>Email: <a href="mailto:kirillpuzanov@mail.ru">kirillpuzanov@mail.ru</a></li>
+                <li>Telegram: <a href="https://t.me/Kirill_Spb1991">Отправить письмо</a></li>
                 <li>GitHub: <a href="https://github.com/kirillpuzanov">Посмотреть GitHub</a></li>
-                <li>CV: <NavLink to={CV}>Посмотреть резюме</NavLink></li>
+                <li>CV: <a href='https://drive.google.com/file/d/10uBFPk6idxloPL64Gw5eygK2pks6HW2a/view?usp=sharing'> Резюме </a></li>
              </ul>
           </div>
           <div className={s.about_inner_aboutMeText}>
@@ -105,7 +104,7 @@ export const Experience = () => {
          title: 'Курсы Udemi',
          description: ['WEB-разработчик. Автор: Иван Петриченко',
             'Полный курс по JavaScript. Автор: Иван Петриченко ',
-            'React + Redux Пофессиональная разработка. Автор: Юрий Бура']
+            'React + Redux Профессиональная разработка. Автор: Юрий Бура']
       },
       {
          job: false,
