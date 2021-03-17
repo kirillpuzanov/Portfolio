@@ -29,10 +29,13 @@ export const AboutMeInfo = () => {
                 <li>Адрес: Санкт-Петербург</li>
                 <li>Национальность: Русский</li>
                 <li>Телефон: <a href="tel:+79111264979">+7 (911) 126-49-79</a></li>
-                <li>Email: <a href="mailto:kirillpuzanov@mail.ru">kirillpuzanov@mail.ru</a></li>
-                <li>Telegram: <a href="https://t.me/Kirill_Spb1991">Отправить письмо</a></li>
-                <li>GitHub: <a href="https://github.com/kirillpuzanov">Посмотреть GitHub</a></li>
-                <li>CV: <a href='https://drive.google.com/file/d/10uBFPk6idxloPL64Gw5eygK2pks6HW2a/view?usp=sharing'> Резюме </a></li>
+                <li>Email: <a target='_blank' href="mailto:kirillpuzanov@mail.ru">kirillpuzanov@mail.ru</a></li>
+                <li>Telegram: <a target='_blank' href="https://t.me/Kirill_Spb1991">Отправить письмо</a></li>
+                <li>GitHub: <a target='_blank' href="https://github.com/kirillpuzanov">Посмотреть GitHub</a></li>
+                <li>CV: <a target='_blank'
+                           href='https://drive.google.com/file/d/10uBFPk6idxloPL64Gw5eygK2pks6HW2a/view?usp=sharing'>
+                   Резюме </a>
+                </li>
              </ul>
           </div>
           <div className={s.about_inner_aboutMeText}>
@@ -85,58 +88,85 @@ export const Experience = () => {
       {
          job: true,
          period: 'декабрь 2020 - по н.вр.',
-         title: 'TLgroup СПб',
-         description: ['Lorem ipsum dolor sit amet, consectetur adipisicing elit.' +
-         'Amet assumenda at earum facere modi nulla omnis quos saepe temporibus!' +
-         'Accusamus aspernatur est ipsam ipsum iure minima officia rem sequi, voluptatem.']
+         title: 'TLgroup СПб, Frontend developer ',
+         description: `Задачи: создание full stack приложения, 
+         для расчета груза и подбору транспорта для его перевозки
+         Выполнено:
+             -создание базовой архитектуры
+             -аутентификация ( back 100%, front 60%)
+             -авторизация (100% использование cookie)
+             -компоненты для ввода данных (back 100%,front90%)
+             -написание backEnd, Rest Api, подключение к MongoDB
+             -синхронизация DB и ReduxState
+             -использование TS, Redux Toolkit`
+      },
+      {
+         job: true,
+         period: 'октябрь 2020 - ноябрь 2020',
+         title: 'Freelance - Frontend developer',
+         description: `Задачи:
+                       -перевод частей проекта на TS
+                       -перевод классовых компонент на функциональные
+                       -рефакторинг / верстка
+                       -создание форм и управление их состоянием
+                    Использовал: 
+                    -React / Redux / ReduxForm / Formic / Material Ui / Ant Design
+                    -Hook's / Axios / Git / Redux thunk / Unit tests`
       },
       {
          job: false,
-         period: 'июнь 2020 - декабрь 2020',
+         period: '2020 - 2020',
          title: 'IT-Incubator',
-         description: ['Lorem ipsum dolor sit amet, consectetur adipisicing elit.' +
-         'Amet assumenda at earum facere modi nulla omnis quos saepe temporibus!' +
-         'Accusamus aspernatur est ipsam ipsum iure minima officia rem sequi, voluptatem.']
+         description: `Изучение Frontend разработки,
+         UI иблиотеки React и библиотеки стейт менеджмента Redux.
+         Освоение некоторых архитектурных подходов
+         и применение современных технологий разработки 
+         на практике.`
       },
       {
          job: false,
-         period: 'февраль 2020 - май 2020',
+         period: '2019 - 2020',
          title: 'Курсы Udemi',
-         description: ['WEB-разработчик. Автор: Иван Петриченко',
-            'Полный курс по JavaScript. Автор: Иван Петриченко ',
-            'React + Redux Профессиональная разработка. Автор: Юрий Бура']
+         description: `WEB-разработчик
+         Полный курс по JavaScript
+         React + Redux Профессиональная разработка`
+      },
+      {
+         job: true,
+         period: '2015 - 2021',
+         title: 'Пожарно-спасательный отряд Выборгского р-а Спб',
+         description: 'Старший пожарный'
+      },
+      {
+         job: true,
+         period: '2015 - 2021',
+         title: 'ООО "ФИТНЕС-ХАУС" 2012-2014  Персональный тренер',
+         description: `-выполнение планов
+             -привлечение клиентов
+             -проведение тренировок / составление тренировочных программ`
       },
       {
          job: false,
-         period: '2016 - 2018',
+         period: '2012 - 2014',
          title: 'Санкт-Петербургский университет государственной противопожарной службы МЧС РФ',
-         description: ['Специализация: "пожаротушение и проведение аварийно-спасательных работ"']
+         description: 'Специализация: "пожаротушение и проведение аварийно-спасательных работ'
       },
       {
          job: false,
-         period: '2009 - май 2013',
+         period: '2009 - 2013',
          title: 'Национальный Государственный Университет им.П.Ф.Лесгафта',
-         description: ['Педагогический факультет']
+         description: 'Педагогический факультет'
       },
-
    ]
 
    const showExp = () => {
       return expData.map(el => {
          const icon = <FontAwesomeIcon icon={el.job ? faBriefcase : faGraduationCap}/>
-         return <li key={el.period}>
+         return <li key={el.title}>
             <span className={s.experience_list_icon}>{icon} </span>
             <span className={s.experience_list_period}>{el.period}</span>
             <h6 className={s.experience_list_title}>{el.title}</h6>
-            <div className={s.experience_list_description}>
-               <p>{el.description[0]}</p>
-               {el.description.length > 1 &&
-               <>
-                  <p>{el.description[1]}</p>
-                  <p>{el.description[2]}</p>
-               </>
-               }
-            </div>
+            <p className={s.experience_list_description}>{el.description}</p>
          </li>
       })
    }

@@ -21,7 +21,7 @@
    &_inner {
       position: relative;
       @include flexCenter();
-      justify-content: space-between;
+      justify-content: space-evenly;
       flex-wrap: wrap;
 
       &:after {
@@ -41,7 +41,7 @@
          padding: 30px 10px 0;
 
          li {
-            font-size: 18px;
+            font-size: 16px;
             line-height: 2;
          }
       }
@@ -114,7 +114,6 @@
 
       display: flex;
       justify-content: space-between;
-      align-items: center;
       flex-wrap: wrap;
 
       li {
@@ -158,6 +157,7 @@
          margin-top: 10px;
          font-weight: 300;
          line-height: 1.8;
+         white-space: pre-line
       }
    }
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import st from './CV.module.scss';
-import svg from '../../assets/kirill_puzanov_CV.svg'
+import svg from '../../assets/Kirill_Puzanov_CV.svg';
 import {MyBtn} from "../c0-Common/btn/MyBtn";
 import {faDownload} from "@fortawesome/free-solid-svg-icons";
 

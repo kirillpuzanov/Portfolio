@@ -3,10 +3,10 @@ import {Switch, Route} from 'react-router-dom';
 import {StartScreen} from "../component/c1-StartScreen/StartScreen";
 import {AboutMe} from "../component/c2-AboutMe/AboutMe";
 import {MyProjects} from "../component/c3-MyProjects/MyProjects";
-import {Contacts} from "../component/c4-Contacts/Contacts";
 import {CVComponent} from "../component/c5-CVComponent/CVComponent";
 import {animated, useTransition} from 'react-spring'
 import {__RouterContext} from "react-router";
+import {Contacts} from "../component/c4-Contacts/Contacts";
 
 export const FIRST_SCREEN = '/portfolio';
 export const ABOUT_ME = '/about_me';

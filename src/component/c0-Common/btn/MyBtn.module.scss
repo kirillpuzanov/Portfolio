@@ -1,11 +1,12 @@
 @import '../saas/variables.module';
 
 
-.myBtn{
+.myBtn {
    background-color: $rootColor;
    color: #fff;
    margin: 10px 10px 10px 0;
-   border-radius:12px;
+   border-radius: 12px;
+   border: none;
    font-weight: 500;
    line-height: 46px;
    font-size: 15px;
@@ -15,9 +16,11 @@
    position: relative;
    letter-spacing: .5px;
    outline: none;
-   text-decoration:none;
+   text-decoration: none;
    overflow: hidden;
-   & span{
+   cursor: pointer;
+
+   & span {
       color: #fff;
       opacity: 0;
       position: absolute;
@@ -27,11 +30,13 @@
       transition: all 0.5s;
       transform: translateX(-20px);
    }
-   &:hover p{
+
+   &:hover p {
       transform: translateX(-10px);
       transition: all 0.5s;
    }
-   &:hover span{
+
+   &:hover span {
       opacity: 1;
       transform: translateX(0);
    }
