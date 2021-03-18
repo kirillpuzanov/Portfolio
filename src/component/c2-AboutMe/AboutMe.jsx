@@ -39,15 +39,17 @@ export const AboutMeInfo = () => {
              </ul>
           </div>
           <div className={s.about_inner_aboutMeText}>
-             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Amet assumenda at earum facere modi nulla omnis quos saepe temporibus!
-                Accusamus aspernatur est ipsam ipsum iure minima officia rem sequi, voluptatem.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Aspernatur culpa deserunt dolorem doloremque harum id incidunt laborum odit officiis perferendis
-                provident sit soluta vel, veniam veritatis! Corporis cupiditate in quia?Lorem ipsum dolor sit amet,
-                consectetur adipisicing elit. Ad aliquam aspernatur consequuntur esse explicabo facilis illum in
-                magnam magni molestiae nostrum, placeat possimus quam quas quos vel veritatis voluptate voluptatum.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+             <p>
+                Выпускник белорусской школы IT-Incubator. Разрабатываю SPA приложения с использованием, React/Redux и других современных инструментов. <br/>
+                В свободное время интересуюсь изучением Node.js, Express и мобильной разработкой на React Native, занимаюсь спортом. <br/>
+                <br/>
+                Почему IT ..? Потому, что в определенный момент времени, имея за плечами не малый жизненный опыт,
+                понял, что необходимо обрести перспективную, стабильную и хорошо оплачиваемую профессию. <br/>
+                <br/>
+                Спустя полтора года обучения,  освоил основные инструменты Frontend разработки по своему направлению.
+                За это время выполнял учебные проекты, работал на фрилансе, а также разрабатывал fullStack приложение на стеке MERN. <br/>
+                <br/>
+                Открыт для ваших предложений и буду рад стать участником вашей команды.
              </p>
           </div>
        </div>
