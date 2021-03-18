@@ -26,6 +26,7 @@
    .text {
       max-width: 550px;
       text-align: left;
+      padding-left: 20px;
 
       &_hello {
          font-size: 22px;
@@ -55,7 +56,7 @@
    flex-wrap: wrap;
 }
 
-@media (max-width: 920px) {
+@media (max-width: 1020px) {
    .first {
       &_row {
          position: relative;
@@ -64,18 +65,19 @@
          justify-content: space-evenly;
       }
 
-      &_img {
-         width: 200px !important;
-         max-height: 300px !important;
-         background-size: contain !important;
-      }
-
       .text {
          text-align: center;
       }
    }
    .btn_block {
       justify-content: center;
+   }
+}
+
+@media (max-width: 585px) {
+   .first_img {
+      width: 250px !important;
+      height: 250px !important;
    }
 }
 
@@ -91,6 +93,18 @@
       margin-top: 70px;
    }
    .first .text h1 {
-      font-size: 35px;
+      font-size: 25px;
+   }
+   .text_descr {
+
+      font-size: 20px;
+   }
+}
+
+@media (max-height: 645px){
+   .first_img {
+      margin-top: 30px;
+      width: 150px !important;
+      height: 150px !important;
    }
 }

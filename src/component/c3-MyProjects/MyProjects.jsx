@@ -29,7 +29,9 @@ export const MyProjects = () => {
          hrefGitHub: 'https://github.com/kirillpuzanov/TodoList',
          background: `url(${todoList})`,
          descr: `Проект, реализованный за время учебы в IT-Incubator
-         Email: free@samuraijs.com Password: free`
+         Для теста:
+         Email: free@samuraijs.com
+         Password: free`
       },
       {
          id: 2,
@@ -37,10 +39,12 @@ export const MyProjects = () => {
          hrefProject: 'https://kirillpuzanov.github.io/fridayProject',
          hrefGitHub: 'https://github.com/kirillpuzanov/fridayProject',
          background: `url(${friday})`,
-         descr: `Командный проект(2 человека)
-         Карточки для обучения, возможность создания,поиска, сортировки.Работа с Git.
-         Email: kirillpuzanovhtc@gmail.com \n Password: 12345678`,
-
+         descr: `Командный проект (2 человека)
+         Карточки для обучения, возможность создания,поиска, сортировки.
+         Работа с Git.
+         Для теста:
+         Email: kirillpuzanovhtc@gmail.com
+         Password: 12345678`,
       },
       {
          id: 3,

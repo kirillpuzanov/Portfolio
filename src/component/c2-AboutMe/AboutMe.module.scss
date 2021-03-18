@@ -58,6 +58,7 @@
    .about {
       &_inner {
          justify-content: center;
+
          &_contacts,
          &_aboutMeText {
             text-align: center;
@@ -70,7 +71,7 @@
 
 .mySkills {
    margin-top: 65px;
-   min-height: 400px;
+   min-height: 330px;
 
    h3 {
       text-align: center;
@@ -96,13 +97,9 @@
    }
 }
 
-@media(max-width: 780px) {
-
-}
 
 //about me  Experience
 .experience {
-   margin-top: 45px;
    h3 {
       text-align: center;
       color: $rootColor;
@@ -161,10 +158,18 @@
       }
    }
 }
+
+@media(max-width: 1416px) {
+   .experience {
+      margin-top: 45px;
+   }
+}
+
 @media (max-width: 777px) {
-   .experience{
-      &_list{
+   .experience {
+      &_list {
          justify-content: center;
+
          li {
             width: 80%;
             padding: 40px 0 0 40px;

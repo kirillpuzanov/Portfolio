@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './StartScreen.module.scss'
 import {MyBtn} from "../c0-Common/btn/MyBtn";
-import userPhoto from '../../assets/img/UserPhoto.png'
+import userPhoto from '../../assets/img/user.jpg'
 import {faUser} from "@fortawesome/free-regular-svg-icons";
 import {faFile} from "@fortawesome/free-solid-svg-icons";
 import {ABOUT_ME} from "../../root/routes";
@@ -12,8 +12,9 @@ import {ABOUT_ME} from "../../root/routes";
 export const StartScreen = () => {
 
    const styleImg = {
-      width: '300px',
-      height: 'calc(100vh - 60px)',
+      width: '350px',
+      // height: 'calc(100vh - 60px)',
+      height: '350px',
       backgroundImage: `url(${userPhoto})`,
       backgroundRepeat: ' no-repeat',
       backgroundSize: 'contain',
@@ -21,6 +22,7 @@ export const StartScreen = () => {
       zIndex: 77,
       left: '30px',
       top: '30px',
+      borderRadius: '50%'
    }
 
 
