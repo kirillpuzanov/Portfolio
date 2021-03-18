@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {ErrorMessage, Field, Form, Formik,} from 'formik';
 import s from './Contacts.module.scss';
 import {MyBtn} from "../c0-Common/btn/MyBtn";
@@ -6,18 +6,27 @@ import {faMailBulk, faShare} from "@fortawesome/free-solid-svg-icons";
 import {SectionTitle} from "../c0-Common/sectionTitle/SectionTitle";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGithub, faLinkedinIn, faTelegramPlane} from "@fortawesome/free-brands-svg-icons";
+import {sendMessage} from "./dal/sendMessage";
 
 
 export const Contacts = () => {
 
-
+   const [showSnac, setShowSnac] = useState(false)
+   const handleClose = () => setShowSnac(false)
+   const handleShow = () => {
+      setShowSnac(true)
+      setTimeout(() => {
+         handleClose()
+      }, 6000)
+   }
    return (<section className={s.contactsSection}>
       <SectionTitle titleText={'Контакты'}/>
       <div className={s.colorBlock}></div>
       <div className={s.contacts_wrapper}>
          <ContactsLinks/>
-         <ContactsForm/>
+         <ContactsForm handleShow={handleShow}/>
       </div>
+      {showSnac && <SnacBar handleClose={handleClose}/>}
    </section>)
 }
 
@@ -48,7 +57,7 @@ export const ContactsLinks = () => {
    )
 }
 
-export const ContactsForm = () => {
+export const ContactsForm = ({handleShow}) => {
    const validateContactsForm = (values) => {
       const errors = {};
       if (!values.email) {
@@ -65,7 +74,7 @@ export const ContactsForm = () => {
 
    const formSubmit = (values, {setSubmitting}) => {
       setSubmitting(false)
-      console.log(values)
+      sendMessage(values).then(res => handleShow())
    }
    return (
        <div className={s.contacts_form}>
@@ -86,6 +95,19 @@ export const ContactsForm = () => {
                  </Form>
              )}
           </Formik>
+       </div>
+   )
+}
+
+export const SnacBar = (props) => {
+   const {handleClose} = props;
+
+   return (
+       <div className={s.snacBar}>
+          <span className={s.snacBar_message}>
+             Ваше сообщение успешно отправлено! Я свяжусь с вами в ближайшее время. Спасибо!
+          </span>
+          <span className={s.snacBar_close} onClick={handleClose}></span>
        </div>
    )
 }

@@ -6,6 +6,9 @@ import {faUser} from "@fortawesome/free-regular-svg-icons";
 import {faFile} from "@fortawesome/free-solid-svg-icons";
 import {ABOUT_ME} from "../../root/routes";
 
+
+
+
 export const StartScreen = () => {
 
    const styleImg = {

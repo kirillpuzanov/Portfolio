@@ -25,10 +25,10 @@ export const MyProjects = () => {
       {
          id: 1,
          title: 'Todolist',
-         hrefProject: '#',
+         hrefProject: '',
          hrefGitHub: 'https://github.com/kirillpuzanov/TodoList',
          background: `url(${todoList})`,
-         descr: `Проект реализованный за время учебы в IT-Incubator
+         descr: `Проект, реализованный за время учебы в IT-Incubator
          Email: free@samuraijs.com Password: free`
       },
       {
@@ -37,8 +37,8 @@ export const MyProjects = () => {
          hrefProject: 'https://kirillpuzanov.github.io/fridayProject',
          hrefGitHub: 'https://github.com/kirillpuzanov/fridayProject',
          background: `url(${friday})`,
-         descr: `Командный проект(2человека)
-         Карточки для обучения, возможность создания,поиска, сортировки.
+         descr: `Командный проект(2 человека)
+         Карточки для обучения, возможность создания,поиска, сортировки.Работа с Git.
          Email: kirillpuzanovhtc@gmail.com \n Password: 12345678`,
 
       },

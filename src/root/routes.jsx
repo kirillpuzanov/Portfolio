@@ -8,13 +8,11 @@ import {animated, useTransition} from 'react-spring'
 import {__RouterContext} from "react-router";
 import {Contacts} from "../component/c4-Contacts/Contacts";
 
-export const FIRST_SCREEN = '/portfolio';
+export const FIRST_SCREEN = '/';
 export const ABOUT_ME = '/about_me';
 export const PROJECTS = '/projects';
 export const CONTACTS = '/contacts';
 export const CV = '/cv';
-
-export const PAGE_NOT_FOUND_PATH = '/404';
 
 
 function useRouter() {

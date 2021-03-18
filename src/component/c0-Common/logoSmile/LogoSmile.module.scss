@@ -3,8 +3,6 @@
 
 .logoSmile {
    position: fixed;
-   //top: 30px;
-   //left: 30px;
    right: 23px;
    bottom: 5px;
 }
@@ -53,7 +51,7 @@ svg:hover .eyes {
    }
 }
 
-@media (max-width: 415px) {
+@media (max-width: 460px) {
    .logoSmile {
       display: none;
    }

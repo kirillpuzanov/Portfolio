@@ -12,7 +12,8 @@ export const MyBtn = (props) => {
       return <div className={s.myBtnWrap}>
          <a className={s.myBtn}
             target='_blank'
-            href='https://drive.google.com/file/d/1_zHtBQsvwxTEMX7nnmeVcKK1p6J7F169/view?usp=sharing'>
+            href='https://drive.google.com/file/d/1GgUISj_m2Yix9-FaVo7_qx9C0TeNJwtT/view?usp=sharing'>
+
             <p>{btnText}</p>
             <span className={s.myBtn_icon}>{icon}</span>
          </a>

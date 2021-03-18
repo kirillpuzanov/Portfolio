@@ -33,7 +33,7 @@ export const AboutMeInfo = () => {
                 <li>Telegram: <a target='_blank' href="https://t.me/Kirill_Spb1991">Отправить письмо</a></li>
                 <li>GitHub: <a target='_blank' href="https://github.com/kirillpuzanov">Посмотреть GitHub</a></li>
                 <li>CV: <a target='_blank'
-                           href='https://drive.google.com/file/d/10uBFPk6idxloPL64Gw5eygK2pks6HW2a/view?usp=sharing'>
+                           href=' https://drive.google.com/file/d/1GgUISj_m2Yix9-FaVo7_qx9C0TeNJwtT/view?usp=sharing'>
                    Резюме </a>
                 </li>
              </ul>
@@ -102,7 +102,7 @@ export const Experience = () => {
       },
       {
          job: true,
-         period: 'октябрь 2020 - ноябрь 2020',
+         period: 'сентябрь 2020 - ноябрь 2020',
          title: 'Freelance - Frontend developer',
          description: `Задачи:
                        -перевод частей проекта на TS
@@ -134,20 +134,19 @@ export const Experience = () => {
       {
          job: true,
          period: '2015 - 2021',
-         title: 'Пожарно-спасательный отряд Выборгского р-а Спб',
+         title: 'Пожарно-спасательный отряд Выборгского р-на Спб',
          description: 'Старший пожарный'
       },
       {
          job: true,
-         period: '2015 - 2021',
-         title: 'ООО "ФИТНЕС-ХАУС" 2012-2014  Персональный тренер',
-         description: `-выполнение планов
-             -привлечение клиентов
-             -проведение тренировок / составление тренировочных программ`
+         period: '2012 - 2015',
+         title: 'ООО "ФИТНЕС-ХАУС" 2012-2014  Старший инструктор тренажерного зала',
+         description: `Организация работы тренерского состава / составление графиков работы 
+         / выполнение планов продаж / привлечение клиентов`
       },
       {
          job: false,
-         period: '2012 - 2014',
+         period: '2017 - 2019',
          title: 'Санкт-Петербургский университет государственной противопожарной службы МЧС РФ',
          description: 'Специализация: "пожаротушение и проведение аварийно-спасательных работ'
       },
