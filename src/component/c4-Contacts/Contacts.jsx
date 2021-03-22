@@ -7,26 +7,37 @@ import {SectionTitle} from "../c0-Common/sectionTitle/SectionTitle";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGithub, faLinkedinIn, faTelegramPlane} from "@fortawesome/free-brands-svg-icons";
 import {sendMessage} from "./dal/sendMessage";
+import {Preloader} from "../c0-Common/preloader/preloader";
 
 
 export const Contacts = () => {
 
-   const [showSnac, setShowSnac] = useState(false)
-   const handleClose = () => setShowSnac(false)
-   const handleShow = () => {
-      setShowSnac(true)
+   const [showSnack, setShowSnack] = useState(false)
+   const [showLoader, setShowLoader] = useState(false)
+   const sendForm = (obj) => {
+      setShowLoader(true)
+      sendMessage(obj).then(() => {
+         handleShowSnack()
+         setShowLoader(false)
+      })
+   }
+   const handleCloseSnack = () => setShowSnack(false)
+   const handleShowSnack = () => {
+      setShowSnack(true)
       setTimeout(() => {
-         handleClose()
+         handleCloseSnack()
       }, 6000)
    }
    return (<section className={s.contactsSection}>
       <SectionTitle titleText={'Контакты'}/>
       <div className={s.colorBlock}></div>
+      {showLoader && <Preloader/>}
       <div className={s.contacts_wrapper}>
          <ContactsLinks/>
-         <ContactsForm handleShow={handleShow}/>
+         <ContactsForm handleCloseSnack={handleCloseSnack}
+                       showSnack={showSnack} sendForm={sendForm}
+         />
       </div>
-      {showSnac && <SnacBar handleClose={handleClose}/>}
    </section>)
 }
 
@@ -57,7 +68,7 @@ export const ContactsLinks = () => {
    )
 }
 
-export const ContactsForm = ({handleShow}) => {
+export const ContactsForm = ({handleCloseSnack, showSnack, sendForm}) => {
    const validateContactsForm = (values) => {
       const errors = {};
       if (!values.email) {
@@ -74,7 +85,7 @@ export const ContactsForm = ({handleShow}) => {
 
    const formSubmit = (values, {setSubmitting}) => {
       setSubmitting(false)
-      sendMessage(values).then(res => handleShow())
+      sendForm(values)
    }
    return (
        <div className={s.contacts_form}>
@@ -91,6 +102,7 @@ export const ContactsForm = ({handleShow}) => {
                     <ErrorMessage name="userName" component="span" className={s.errorMessage}/>
                     <Field as="textarea" name="message" placeholder="Сообщение.." className={s.contacts_form_textarea}/>
                     <ErrorMessage name="message" component="span" className={s.errorMessage}/>
+                    {showSnack && <SnacBar handleClose={handleCloseSnack}/>}
                     <MyBtn type="submit" disabled={isSubmitting} btnText='Отправить' iconName={faShare}/>
                  </Form>
              )}
